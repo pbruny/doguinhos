@@ -20,16 +20,3 @@
   opacity: 0.5;
   cursor: wait;
 }
-
-.label {
-  display: block;
-  line-height: 1;
-  padding-bottom: 0.5rem;
-  font-size: 1rem;
-}
-
-.error {
-  color: #f31;
-  font-size: 0.875rem;
-  margin-top: 0.25rem;
-}
