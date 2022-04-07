@@ -38,7 +38,7 @@ const LoginForm = () => {
       <div className={styles.createContainer}>
         <h2 className={styles.subtitle}>Cadastre-se</h2>
         <p>Ainda não tem uma conta?</p>
-        <Link className={buttonStyles.button} to="/login/criar">Cadastre-se</Link>
+        <Link className={buttonStyles.button} to="/login/create">Cadastre-se</Link>
       </div>
     </section>
   )
