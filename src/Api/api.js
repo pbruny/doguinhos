@@ -28,3 +28,10 @@ export const USER_GET = (token) => {
     },
   }
 }
+
+export const USER_POST = (body) => {
+  return {
+    url: `${apiUrl}/api/user`,
+    data: body,
+  }
+}
