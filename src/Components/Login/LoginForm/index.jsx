@@ -3,6 +3,10 @@ import { UserContext } from '../../../Contexts/UserContext'
 import useForm from '../../../Hooks/useForm'
 import Button from '../../FormComponents/Button'
 import Input from '../../FormComponents/Input'
+import Error from '../../Error'
+import styles from './LoginForm.module.css'
+import buttonStyles from '../../FormComponents/Button/Button.module.css'
+import { Link } from 'react-router-dom'
 
 const LoginForm = () => {
   const username = useForm()
@@ -18,9 +22,9 @@ const LoginForm = () => {
   }
 
   return (
-    <section>
-      <h1>Login</h1>
-      <form onSubmit={handleFormSubmit}>
+    <section className='animateLeft'>
+      <h1 className='title'>Login</h1>
+      <form className={styles.form} onSubmit={handleFormSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />
         <Input label="Senha" type="password" name="password" {...password} />
         {loading ? (
@@ -28,8 +32,14 @@ const LoginForm = () => {
         ) : (
           <Button>Entrar</Button>
         )}
-        {error && <p>{error}</p>}
+        <Error error={error} />
       </form>
+      <Link className={styles.forgot} to="/login/perdeu">Perdeu a senha?</Link>
+      <div className={styles.createContainer}>
+        <h2 className={styles.subtitle}>Cadastre-se</h2>
+        <p>Ainda não tem uma conta?</p>
+        <Link className={buttonStyles.button} to="/login/criar">Cadastre-se</Link>
+      </div>
     </section>
   )
 }
