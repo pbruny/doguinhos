@@ -9,6 +9,10 @@ const validateTypes = {
   password: {
     regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
     message: 'A senha deve conter, no mínimo, 8 caracteres e 1 número, 1 maíusculo e 1 minúsculo'
+  },
+  number: {
+    regex: /^\d+$/,
+    message: 'Utilize apenas números'
   }
 }
 
