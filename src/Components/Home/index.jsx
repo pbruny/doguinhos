@@ -1,5 +1,13 @@
+import Feed from '../Feed';
 import styles from './Home.module.css'
 
-const Home = () => <h1>Home</h1>
+
+const Home = () => {
+  return (
+    <section className='container mainContainer'>
+      <Feed />
+    </section>
+  )
+}
 
 export default Home
