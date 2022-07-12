@@ -7,6 +7,7 @@ import LoginResetPassword from './LoginResetPassword'
 import styles from './Login.module.css'
 import { UserContext } from '../../Contexts/UserContext'
 import Error404 from '../Error404'
+import Head from '../../Helper/Head'
 
 const Login = () => {
 
@@ -16,6 +17,7 @@ const Login = () => {
 
   return (
     <section className={styles.login}>
+      <Head title="Resetar senha" />
       <div className={styles.forms}>
         <Routes>
           <Route path="/" element={<LoginForm />} />

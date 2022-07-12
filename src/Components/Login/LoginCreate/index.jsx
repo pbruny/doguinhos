@@ -5,6 +5,7 @@ import Button from '../../FormComponents/Button'
 import useForm from '../../../Hooks/useForm'
 import { USER_POST } from '../../../Api/api'
 import { UserContext } from '../../../Contexts/UserContext'
+import Head from '../../../Helper/Head'
 
 const LoginCreate = () => {
   const email = useForm('email')
@@ -32,6 +33,7 @@ const LoginCreate = () => {
 
   return (
     <section className='animateLeft'>
+      <Head title="Crie sua conta" />
       <h1 className='title'>Cadastre-se</h1>
       <form onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />

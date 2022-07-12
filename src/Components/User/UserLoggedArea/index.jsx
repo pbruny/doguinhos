@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { UserContext } from '../../../Contexts/UserContext'
+import Head from '../../../Helper/Head'
 import Error404 from '../../Error404'
 import Feed from '../../Feed'
 import UserHeader from '../UserHeader'
@@ -12,6 +13,7 @@ const UserLoggedArea = () => {
 
   return (
     <section className='container'>
+      <Head title="Minha conta" />
       <UserHeader />
       <Routes>
         <Route path='/' element={<Feed user={data.id} />} />

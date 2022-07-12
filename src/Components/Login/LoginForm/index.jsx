@@ -7,6 +7,7 @@ import Error from '../../Error'
 import styles from './LoginForm.module.css'
 import buttonStyles from '../../FormComponents/Button/Button.module.css'
 import { Link } from 'react-router-dom'
+import Head from '../../../Helper/Head'
 
 const LoginForm = () => {
   const username = useForm()
@@ -23,6 +24,7 @@ const LoginForm = () => {
 
   return (
     <section className='animateLeft'>
+      <Head title="Login" />
       <h1 className='title'>Login</h1>
       <form className={styles.form} onSubmit={handleFormSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />
